@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:wght@700&family=Josefin+Sans:wght@300&family=Roboto&display=swap');        /* OK */
+/* 
+font-family: 'Andada Pro', serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+/* GENERAL */
+
+*{  
+    margin: 0;                                      /* OK */
+    padding: 0;                                     /* OK */
+    box-sizing: border-box;                         /* OK */
+    color: var(--contentColor);                     /* OK */
+}
+
+:root{
+    --bgcolor: #0B1D26;                           /* OK */
+    --contentColor: #FFF;                         /* OK */
+    --secondaryColor: #FBD784;                    /* OK */
+}
+
+h1{
+    font-family: 'Andada Pro', serif;                /* OK */
+    font-size: 3.5rem;                               /* OK */
+}
+
+h2{
+    font-family: 'Josefin Sans', sans-serif;          /* OK */
+    font-size: 1.2rem;                                /* OK */
+    font-style: italic;                               /* OK */
+    font-weight: thin;                                /* OK */
+    letter-spacing: 0.5rem;                           /* OK */
+    color: var(--secondaryColor);                     /* OK */
+    text-transform: uppercase;                        /* OK */
+}
+
+h3{
+    font-family: 'Andada Pro', serif;                 /* OK */
+    font-size: 3rem;                                  /* OK */
+}
+
+h4{
+    font-family: 'Josefin Sans', sans-serif;          /* OK */
+    font-size: 1.5rem;                                /* OK */
+    color: var(--secondaryColor);                     /* OK */
+}
+
+a{
+    font-family: 'Josefin Sans', sans-serif;          /* OK */
+    font-size: 1.2rem;                                /* OK */
+}
+
+p{
+    font-family: 'Roboto', sans-serif;               /* OK */
+    line-height: 2rem;                               /* OK */
+}
+
+.bouton{
+    color: var(--secondaryColor);                    /* OK */
+}
+
+.flex{
+    display: flex;                                   /* OK */
+    flex-wrap: wrap;                                 /* OK */
+}
+
+body{
+    background-color: var(--bgcolor);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 40%), url(./images/banniere.jpg);
+    background-repeat: no-repeat;
+    background-position-y: -500px;
+}
+
+.spaceBetween{
+    justify-content: space-between;
+}
+
+.colorArrow{
+    color: var(--secondaryColor);
+}
+
+.itemCenter{
+    align-items: center;
+}
+
+:visited, :link, :active{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    line-height: 3rem;
+}
+
+.marginTopBottom{
+    margin: 2rem 0;
+}
+
+.marginTitre{
+    margin-top: 2rem;
+}
+
+.marginTop{
+    margin-top: 15rem;
+}
+
+/*** Header ***/
+
+header{
+    padding: 0 3%;
+    height: 80px;
+}
+
+header nav{
+    width: fit-content;
+    justify-content: center;
+    gap: 16px;
+}
+
+/*** hero ***/
+
+.hero{
+    margin-top: 40px;
+    height: 40vh;
+    padding: 0 3%;
+    justify-content: center;
+    margin-bottom: 40rem;
+}
+
+.titre{
+    width: 650px;
+}
+
+/* nav reseaux */
+
+.reseaux{
+    writing-mode: vertical-rl;
+    height: fit-content;
+    gap: 16px;
+    position: fixed;
+    left: 3%;
+}
+
+/* nav menu */
+
+.menu{
+    height: 15vh;
+    position: fixed;
+    right: 3%;
+}
+
+.menu ul{
+    text-align: right;
+    border-right: 2px solid white;
+    padding-right: 1rem;
+}
+
+/*** main ***/
+
+main img{
+    width: 100%;
+    height: auto;
+}
+
+main section{
+    width: 60%;
+    margin: 0 auto;
+}
+
+main div{
+    width: 45%;
+}
+
+.numero{
+    font-size: 10rem;
+    font-family: 'Andada Pro', serif;
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    top: 20px;
+    left: -100px;
+}
+
+/*** footer ***/
+
+footer{
+    padding: 15rem 10% 5rem 10%;
+}
+
+/* gauche */
+
+.gaucheFooter{
+    width: fit-content;
+    max-width: 350px;
+}
+
+.logo{
+    font-weight: bold;
+}
+
+.footer-gauche-haut{
+    margin-bottom: 160px;
+}
+/*
+.copyright{
+    align-self: flex-end;
+}*/
+
+/* droite */
+
+.droiteFooter{
+    width: fit-content;
+    gap: 40px;
+}
+
+/* Animations */
+
+.animTxt{
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.animTxt:hover{
+    transform: scale(1.5);
+    color: var(--secondaryColor);
+}
+
+.animTxt :hover{
+    transform: scale(1.5);
+    color: var(--secondaryColor);
+}
+
+.animImg{
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.animImg:hover{
+    transform: scale(1.2);
+    border-radius: 150px;
+}
+
+@media screen and (max-width: 1400px) {
+    .s1, .s3{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .s2{
+        flex-direction: column-reverse;
+        gap: 40px;
+     }
+     main section div{
+        width: 60%;
+     }
+}
+@media screen and (min-width: 600px) and (max-width: 999px) {
+    footer{
+        width: fit-content;
+        flex-direction: column-reverse;
+        margin: 0 auto;
+        gap: 40px;
+    }
+    .footer-gauche-haut{
+        margin-bottom: 40px;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    
+    h2{
+        font-size: 1rem;
+    }
+    
+    h3{
+        font-size: 2rem;                                  /* OK */
+    }
+    
+    h4{
+        font-size: 1.1rem;     
+    }
+    
+    a{
+        font-size: 1rem;                                /* OK */
+    }
+    
+    p{
+        line-height: 1.5rem;                               /* OK */
+    }
+    .titre{
+        width: 400px;
+    }
+    main section div{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 599px){
+    p{
+        line-height: 1.2rem;                               /* OK */
+    }
+    .titre{
+        width: 300px;
+    }
+    h1{
+        font-size: 1.8rem;
+    }
+    main section div{
+        width: 85%;
+    }
+    .droiteFooter{
+        flex-direction: column;
+    }
+    footer{
+        width: fit-content;
+        flex-direction: column-reverse;
+        margin: 0 auto;
+        gap: 40px;
+    }
+    .footer-gauche-haut{
+        margin-bottom: 40px;
+    }
+}
