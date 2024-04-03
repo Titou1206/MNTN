@@ -298,7 +298,7 @@ footer{
 }
 @media screen and (max-width: 599px){
     p{
-        line-height: 0.8rem;                               /* OK */
+        line-height: 1rem;                               /* OK */
     }
     .titre{
         width: 250px;
@@ -309,6 +309,7 @@ footer{
     h2{font-size: 0.5rem;}
     h3{ font-size: 1.5rem;}
     h4{font-size: 1.2rem;}
+    header a{font-size: 0.8rem;}
     main section div{
         width: 95%;
     }
