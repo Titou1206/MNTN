@@ -298,17 +298,22 @@ footer{
 }
 @media screen and (max-width: 599px){
     p{
-        line-height: 1.2rem;                               /* OK */
+        line-height: 0.8rem;                               /* OK */
     }
     .titre{
-        width: 300px;
+        width: 250px;
     }
     h1{
         font-size: 1.8rem;
     }
+    h2{font-size: 0.5rem;}
+    h3{ font-size: 1.5rem;}
+    h4{font-size: 1.2rem;}
     main section div{
-        width: 85%;
+        width: 95%;
     }
+    .menu ul { padding-right: 0.5rem;}
+    .numero {left: 0; top: 0;}
     .droiteFooter{
         flex-direction: column;
     }
@@ -317,8 +322,26 @@ footer{
         flex-direction: column-reverse;
         margin: 0 auto;
         gap: 40px;
+        align-items: center;
     }
-    .footer-gauche-haut{
+    footer ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer a{font-size: 1rem;}
+    .gaucheFooter{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+    }
+    .footer-gauche-haut{ 
         margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+    .footer-gauche-haut p{text-align: center;}
+    .copyright {font-size: 0.9rem;}
 }
